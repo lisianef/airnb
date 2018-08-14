@@ -4,16 +4,19 @@ Rails.application.routes.draw do
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
   namespace :agent do
     resources :rappers, only: [:index, :create]
-    resources :bookings, only: [:index]
-    patch "bookings/:id/accept", to: "bookings#accept"
-    patch "bookings/:id/refuse", to: "bookings#refuse"
+    resources :bookings, only: [:index] do
+      member do
+        patch :accept
+        patch :refuse
+      end
+    end
+
+    # patch "bookings/:id/accept", to: "bookings#accept"
+    # patch "bookings/:id/refuse", to: "bookings#refuse"
   end
 
-  resources :rappers, only: [:index, :show]
-  resources :rappers do
-    collection do
-      get 'top', to: 'rappers#top'
-    end
+  resources :rappers, only: [:index, :show] do
+    resources :bookings, only: [:create]
   end
 
   resources :bookings, only: [:index]
