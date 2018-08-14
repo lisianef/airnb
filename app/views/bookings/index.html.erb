@@ -1,0 +1,33 @@
+<h1 class="text-center">My bookings</h1>
+
+
+
+<h2>My bookings to come</h2>
+<p><% @accepted.each do |accepted| %></p>
+    <ul>Récapitulatif de votre demande :
+      <li>Du <%= accepted.starting_on %> au <%= accepted.ending_on %></li>
+      <li>Prestation de <%= accepted.rapper.blaz %></li>
+      <li>Prix total: <%= accepted.total_price %>$</li>
+    </ul>
+  <% end %>
+
+<h2>My bookings to be validated</h2>
+<p><% @pending.each do |pending| %></p>
+    <p>Sorry, <%= pending.user.name %> has not accepted yet!</p>
+    <ul>Récapitulatif de votre demande :
+      <li>Du <%= pending.starting_on %> au <%= pending.ending_on %></li>
+      <li>Prestation de <%= pending.rapper.blaz %></li>
+      <li>Prix total: <%= pending.total_price %>$</li>
+    </ul>
+  <% end %>
+
+
+<h2>My past bookings</h2>
+<p><% @past.each do |past| %></p>
+    <ul>Récapitulatif de votre demande :
+      <li>Du <%= past.starting_on %> au <%= past.ending_on %></li>
+      <li>Prestation de <%= past.rapper.blaz %></li>
+      <li>Prix total: <%= past.total_price %>$</li>
+    </ul>
+  <% end %>
+

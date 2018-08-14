@@ -10,14 +10,14 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_08_14_105156) do
+ActiveRecord::Schema.define(version: 2018_08_14_160105) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
   create_table "bookings", force: :cascade do |t|
-    t.datetime "starting_on"
-    t.datetime "ending_on"
+    t.date "starting_on"
+    t.date "ending_on"
     t.string "status"
     t.integer "total_price"
     t.bigint "user_id"
