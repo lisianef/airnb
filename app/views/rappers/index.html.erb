@@ -1,21 +1,22 @@
-<h1>Tous nos rappers</h1>
-
-<%= form_tag movies_path, method: :get do %>
-  <%= text_field_tag :query,
-    params[:query],
-    class: "form-control",
-    placeholder: "Find a movie"
-  %>
-<% end %>
+<h1 class="text-center">Tous nos rappers</h1>
 
 <div class="main-container">
+  <%#= form_tag rappers_path, method: :get do %>
+    <%#= text_field_tag :query,
+      params[:query],
+      class: "form-control",
+      placeholder: "Find a rapper"
+    %>
+  <%# end %>
   <div class="cards-container">
     <div class="row">
       <% @rappers.each do |rapper| %>
         <div class="col-xs-12 col-sm-6 col-md-4">
-          <div class="card">
-            <div class="card-description">
-              <p><%= rapper.blaz %></p>
+          <div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)),
+         url('<%= cl_image_path rapper.picture, height: 600, crop: :fill %>')">
+            <%= link_to "", rapper_path(rapper), class: "card-link"  %>
+            <div class="card-description"  >
+              <h4><%= rapper.blaz %></h4>
               <p>Style: <%= rapper.style %></p>
               <p>Tarif: <%= rapper.price_per_day %>$/jour</p>
             </div>
