@@ -1,0 +1,34 @@
+<h1>Tous nos rappers</h1>
+
+<%= form_tag movies_path, method: :get do %>
+  <%= text_field_tag :query,
+    params[:query],
+    class: "form-control",
+    placeholder: "Find a movie"
+  %>
+<% end %>
+
+<div class="main-container">
+  <div class="cards-container">
+    <div class="row">
+      <% @rappers.each do |rapper| %>
+        <div class="col-xs-12 col-sm-6 col-md-4">
+          <div class="card">
+            <div class="card-description">
+              <p><%= rapper.blaz %></p>
+              <p>Style: <%= rapper.style %></p>
+              <p>Tarif: <%= rapper.price_per_day %>$/jour</p>
+            </div>
+          </div>
+        </div>
+      <% end %>
+    </div>
+  </div>
+  <div class="map-container">
+    <div id="map">
+    </div>
+  </div>
+</div>
+
+
+
