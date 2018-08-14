@@ -5,6 +5,8 @@ Rails.application.routes.draw do
   namespace :agent do
     resources :rappers, only: [:index, :create]
     resources :bookings, only: [:index]
+    patch "agent/bookings/:id/accept", to: "agent/bookings#accept"
+    patch "agent/bookings/:id/refuse", to: "agent/bookings#refuse"
   end
 
   resources :rappers, only: [:index, :show]
