@@ -10,5 +10,7 @@ class RappersController < ApplicationController
   end
 
   def show
+    @rapper = Rapper.find(params[:id])
   end
+
 end
