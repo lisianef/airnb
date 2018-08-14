@@ -1,0 +1,25 @@
+<div class="container">
+  <div class="row">
+    <div class="form-group col-sm-offset-4 col-sm-4">
+      <h2>Resend confirmation instructions</h2>
+    </div>
+  </div>
+  <div class="row">
+    <div class="form-group col-sm-offset-4 col-sm-4">
+      <%= simple_form_for(resource, as: resource_name, url: confirmation_path(resource_name), html: { method: :post }) do |f| %>
+        <%= f.error_notification %>
+        <%= f.full_error :confirmation_token %>
+        <%= f.input :email, required: true, autofocus: true %>
+    </div>
+  </div>
+  <div class="row">
+    <div class="form-group col-sm-offset-4 col-sm-4">
+      <%= f.button :submit, "Resend confirmation instructions", class: 'btn btn-primary btn-block' %>
+      <% end %>
+    </div>
+  <div class="row">
+    <div class="form-group col-sm-offset-4 col-sm-4">
+      <%= render "devise/shared/links" %>
+    </div>
+  </div>
+</div>
