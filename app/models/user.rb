@@ -5,4 +5,5 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :trackable, :validatable
   has_many :rappers, foreign_key: :agent_id
   has_many :bookings
+  mount_uploader :picture, PhotoUploader
 end
