@@ -4,30 +4,30 @@
 
 <h2>My bookings to come</h2>
 <p><% @accepted.each do |accepted| %></p>
-    <ul>Récapitulatif de votre demande :
-      <li>Du <%= accepted.starting_on %> au <%= accepted.ending_on %></li>
-      <li>Prestation de <%= accepted.rapper.blaz %></li>
-      <li>Prix total: <%= accepted.total_price %>$</li>
+    <ul>Order summary :
+      <li>From <%= accepted.starting_on %> to <%= accepted.ending_on %></li>
+      <li>Performance by <%= accepted.rapper.blaz %></li>
+      <li>Total: <%= accepted.total_price %>$</li>
     </ul>
   <% end %>
 
 <h2>My bookings to be validated</h2>
 <p><% @pending.each do |pending| %></p>
     <p>Sorry, <%= pending.user.name %> has not accepted yet!</p>
-    <ul>Récapitulatif de votre demande :
-      <li>Du <%= pending.starting_on %> au <%= pending.ending_on %></li>
-      <li>Prestation de <%= pending.rapper.blaz %></li>
-      <li>Prix total: <%= pending.total_price %>$</li>
+    <ul>Order summary :
+      <li>From <%= pending.starting_on %> to <%= pending.ending_on %></li>
+      <li>Performance by <%= pending.rapper.blaz %></li>
+      <li>Total: <%= pending.total_price %>$</li>
     </ul>
   <% end %>
 
 
 <h2>My past bookings</h2>
 <p><% @past.each do |past| %></p>
-    <ul>Récapitulatif de votre demande :
-      <li>Du <%= past.starting_on %> au <%= past.ending_on %></li>
-      <li>Prestation de <%= past.rapper.blaz %></li>
-      <li>Prix total: <%= past.total_price %>$</li>
+    <ul>Order summary :
+      <li>From <%= past.starting_on %> to <%= past.ending_on %></li>
+      <li>Performance by <%= past.rapper.blaz %></li>
+      <li>Total: <%= past.total_price %>$</li>
     </ul>
   <% end %>
 
