@@ -1,5 +1,15 @@
 .banner {
   color: white;
+  text-align: center;
+  height: 100vh;
+  /* if you have a 70px navbar => height: calc(100vh - 70px); */
+  background-size: cover !important;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.banner-show {
+  color: white;
   text-shadow: 0 1px 3px rgba(0,0,0,0.6);
   text-align: center;
   height: 100vh;
@@ -7,7 +17,6 @@
   background-size: cover !important;
   background-position: center;
   position: relative;
-  display: flex;
   align-items: center;
   justify-content: center;
 }
@@ -41,4 +50,22 @@
   margin-bottom: 30px;
 }
 
+.banner-cards {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 
+.banner-2 {
+  height: 100vh;
+  text-align: center;
+  h2 {
+    margin-bottom: 50px;
+    margin-top: 50px;
+  }
+  background-color: white;
+}
+
+.hompage {
+  background-color: white;
+}

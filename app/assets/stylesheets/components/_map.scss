@@ -1,0 +1,22 @@
+#map {
+  flex: 0 0 33%;
+  height: 100vh;
+  position: sticky !important;
+  top: 0;
+}
+
+.main-container {
+  display: flex;
+}
+
+@media (max-width: 720px) {
+  .main-container {
+    /* On small screens, we are no longer using row direction but column */
+    flex-direction: column !important;
+  }
+  #map {
+    position: relative !important;
+    flex: 1 0 auto;
+  }
+}
+

@@ -265,3 +265,11 @@ Booking.create!({
   total_price: 6000
 })
 puts "Finished!"
+Booking.create!({
+  starting_on: Date.new(2018, 8, 31),
+  ending_on: Date.new(2018, 9, 1),
+  user: lisiane,
+  rapper: craig,
+  status: "accepted",
+  total_price: 6000
+})
