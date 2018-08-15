@@ -244,9 +244,9 @@ Booking.create!({
   starting_on: Date.new(2018, 9, 1),
   ending_on: Date.new(2018, 9, 5),
   user: lisiane,
-  rapper: teki,
+  rapper: tupac,
   status: "pending",
-  total_price: 6000
+  total_price: 8000
 })
 Booking.create!({
   starting_on: Date.new(2018, 8, 20),
@@ -254,22 +254,54 @@ Booking.create!({
   user: enzo,
   rapper: hamza,
   status: "pending",
-  total_price: 6000
+  total_price: 6700
 })
 Booking.create!({
-  starting_on: Date.new(2018, 8, 1),
-  ending_on: Date.new(2018, 8, 2),
+  starting_on: Date.new(2018, 6, 1),
+  ending_on: Date.new(2018, 6, 2),
   user: lisiane,
-  rapper: craig,
+  rapper: pnl,
   status: "accepted",
-  total_price: 6000
+  total_price: 6650
+})
+Booking.create!({
+  starting_on: Date.new(2018, 3, 1),
+  ending_on: Date.new(2018, 3, 4),
+  user: lisiane,
+  rapper: notorious,
+  status: "accepted",
+  total_price: 6455
+})
+Booking.create!({
+  starting_on: Date.new(2018, 6, 1),
+  ending_on: Date.new(2018, 6, 2),
+  user: lisiane,
+  rapper: pnl,
+  status: "accepted",
+  total_price: 6650
+})
+Booking.create!({
+  starting_on: Date.new(2018, 3, 1),
+  ending_on: Date.new(2018, 3, 4),
+  user: lisiane,
+  rapper: notorious,
+  status: "accepted",
+  total_price: 6455
+})
+Booking.create!({
+  starting_on: Date.new(2018, 3, 21),
+  ending_on: Date.new(2018, 3, 22),
+  user: lisiane,
+  rapper: vybz,
+  status: "accepted",
+  total_price: 7650
 })
 puts "Finished!"
 Booking.create!({
   starting_on: Date.new(2018, 8, 31),
   ending_on: Date.new(2018, 9, 1),
   user: lisiane,
-  rapper: craig,
+  rapper: vybz,
   status: "accepted",
-  total_price: 6000
+  total_price: 9200
 })
