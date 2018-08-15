@@ -37,9 +37,9 @@ puts "Creating rappers..."
 booba = Rapper.create!({
   agent: lisiane,
   blaz: "Booba",
-  description: "Grand black",
+  description: "Pretty black",
   punchline: "Que des n°10 dans ma team",
-  style: "hardcore",
+  style: "Hardcore",
   origin: "93",
   address: "25 boulevard de Stalingrad, 44000 Nantes, France",
   price_per_day: 5000,
@@ -63,9 +63,9 @@ vybz = Rapper.create!({
 drake = Rapper.create!({
   agent: lisiane,
   blaz: "Drake",
-  description: "Bon danseur",
+  description: "Good danceur",
   punchline: "Call me on my cellphone",
-  style: "canadien",
+  style: "Canadian",
   origin: "Vancouver",
   address: "2 Rue meuris, 44100 Nantes, France",
   price_per_day: 10000,
@@ -76,7 +76,7 @@ drake = Rapper.create!({
 tupac = Rapper.create!({
   agent: lisiane,
   blaz: "2pac",
-  description: "mort",
+  description: "Dead",
   punchline: "Thug Life",
   style: "Hip-hop",
   origin: "Las Vegas",
@@ -89,10 +89,10 @@ tupac = Rapper.create!({
 teki = Rapper.create!({
   agent: marine,
   blaz: "Teki latex",
-  description: "A travaillé avec Lio et Leslie",
+  description: "Worked with Lio & Leslie",
   punchline: "Quand je me lève le matin",
-  style: "electro",
-  origin: "parisien",
+  style: "Electro",
+  origin: "Parisian",
   address: "24 rue kervegan 44000 Nantes, France",
   price_per_day: 1000,
   picture: File.open(Rails.root.join("db/fixtures/rappers/teki.jpg")),
@@ -130,8 +130,8 @@ hamza = Rapper.create!({
   blaz: "Hamza",
   description: "mi r'n'b mi trap",
   punchline: "Sauce God",
-  style: "trap'n'b",
-  origin: "Belge",
+  style: "Trap'n'b",
+  origin: "Belgian",
   address: "94, rue des hauts pavés 44000 Nantes, France",
   price_per_day: 1500,
   picture: File.open(Rails.root.join("db/fixtures/rappers/hamza.jpg")),
@@ -141,7 +141,7 @@ hamza = Rapper.create!({
 pnl = Rapper.create!({
   agent: enzo,
   blaz: "PNL",
-  description: "nouvelle vague",
+  description: "Nouvelle vague",
   punchline: "Non mais allo",
   style: "Rap cheulou",
   origin: "Essone",
@@ -154,9 +154,9 @@ pnl = Rapper.create!({
 sch = Rapper.create!({
   agent: marine,
   blaz: "SCH",
-  description: "hardcore",
+  description: "Hardcore",
   punchline: "Appart pas loué",
-  style: "marseillais",
+  style: "Marseillais",
   origin: "Marseille",
   address: "30 boulevard de la prairie au Duc 44200 Nantes, France",
   price_per_day: 4000,
@@ -168,8 +168,8 @@ ichon = Rapper.create!({
   agent: lisiane,
   blaz: "Ichon",
   description: "Si l'on ride",
-  punchline: "l'amour nous donnera des ailes",
-  style: "rap conscient",
+  punchline: "L'amour nous donnera des ailes",
+  style: "Rap conscient",
   origin: "Paris",
   address: "3 rue des carmes 44000 Nantes, France",
   price_per_day: 1000,
@@ -180,10 +180,10 @@ ichon = Rapper.create!({
 liza = Rapper.create!({
   agent: enzo,
   blaz: "Liza Monet",
-  description: "rappeuse",
+  description: "She Rapper",
   punchline: "Yaourt au fruit",
-  style: "hardcore",
-  origin: "panam",
+  style: "Hardcore",
+  origin: "Panam",
   address: "2 boulevard Jean Monnet 44000 Nantes, France",
   price_per_day: 900,
   picture: File.open(Rails.root.join("db/fixtures/rappers/liza-monnet.jpg")),
@@ -193,9 +193,9 @@ liza = Rapper.create!({
 amandine = Rapper.create!({
   agent: enzo,
   blaz: "Amandine du 38",
-  description: "swag",
+  description: "Swag",
   punchline: "swag",
-  style: "du 38",
+  style: "Du 38",
   origin: "Isère",
   address: "20, rue Pitre Chevalier 44000 Nantes, France",
   price_per_day: 200,
@@ -219,7 +219,7 @@ notorious = Rapper.create!({
 craig  = Rapper.create!({
   agent: marine,
   blaz: "Craig David",
-  description: "Meilleur son 2000",
+  description: "Best sound 2000",
   punchline: "7 days",
   style: "UK garage",
   origin: "Londres",
@@ -244,9 +244,9 @@ Booking.create!({
   starting_on: Date.new(2018, 9, 1),
   ending_on: Date.new(2018, 9, 5),
   user: lisiane,
-  rapper: teki,
+  rapper: tupac,
   status: "pending",
-  total_price: 6000
+  total_price: 8000
 })
 Booking.create!({
   starting_on: Date.new(2018, 8, 20),
@@ -254,22 +254,54 @@ Booking.create!({
   user: enzo,
   rapper: hamza,
   status: "pending",
-  total_price: 6000
+  total_price: 6700
 })
 Booking.create!({
-  starting_on: Date.new(2018, 8, 1),
-  ending_on: Date.new(2018, 8, 2),
+  starting_on: Date.new(2018, 6, 1),
+  ending_on: Date.new(2018, 6, 2),
   user: lisiane,
-  rapper: craig,
+  rapper: pnl,
   status: "accepted",
-  total_price: 6000
+  total_price: 6650
+})
+Booking.create!({
+  starting_on: Date.new(2018, 3, 1),
+  ending_on: Date.new(2018, 3, 4),
+  user: lisiane,
+  rapper: notorious,
+  status: "accepted",
+  total_price: 6455
+})
+Booking.create!({
+  starting_on: Date.new(2018, 6, 1),
+  ending_on: Date.new(2018, 6, 2),
+  user: lisiane,
+  rapper: pnl,
+  status: "accepted",
+  total_price: 6650
+})
+Booking.create!({
+  starting_on: Date.new(2018, 3, 1),
+  ending_on: Date.new(2018, 3, 4),
+  user: lisiane,
+  rapper: notorious,
+  status: "accepted",
+  total_price: 6455
+})
+Booking.create!({
+  starting_on: Date.new(2018, 3, 21),
+  ending_on: Date.new(2018, 3, 22),
+  user: lisiane,
+  rapper: vybz,
+  status: "accepted",
+  total_price: 7650
 })
 puts "Finished!"
 Booking.create!({
   starting_on: Date.new(2018, 8, 31),
   ending_on: Date.new(2018, 9, 1),
   user: lisiane,
-  rapper: craig,
+  rapper: vybz,
   status: "accepted",
-  total_price: 6000
+  total_price: 9200
 })
