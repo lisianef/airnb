@@ -5,7 +5,7 @@ class RappersController < ApplicationController
       {
         lat: rapper.latitude,
         lng: rapper.longitude,
-        # infoWindow: { content: render_to_string(partial: "/flats/map_box", locals: { flat: flat }) }
+        infoWindow: { content: render_to_string(partial: "/rappers/map_box", locals: { rapper: rapper }) }
       }
     end
     # @rappers = Rapper.all
