@@ -1,7 +1,14 @@
 class RappersController < ApplicationController
   def index
-    @rappers = Rapper.all
-    # @const_map = new GMaps({ el: '#map', lat: 48.8648482, lng: 2.3798534, zoom: 14 })
+    @rappers = Rapper.where.not(latitude: nil, longitude: nil)
+    @markers = @rappers.map do |rapper|
+      {
+        lat: rapper.latitude,
+        lng: rapper.longitude,
+        infoWindow: { content: render_to_string(partial: "/rappers/map_box", locals: { rapper: rapper }) }
+      }
+    end
+    # @rappers = Rapper.all
     # if params[:query].present?
     #   @rapper = Rapper.where("blaz ILIKE ?", "%#{params[:query]}%")
     # else
