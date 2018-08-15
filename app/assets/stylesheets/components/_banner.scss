@@ -8,33 +8,6 @@
   align-items: center;
   justify-content: center;
 }
-.banner-show {
-  color: white;
-  text-shadow: 0 1px 3px rgba(0,0,0,0.6);
-  text-align: center;
-  height: 100vh;
-  /* if you have a 70px navbar => height: calc(100vh - 70px); */
-  background-size: cover !important;
-  background-position: center;
-  position: relative;
-  align-items: center;
-  justify-content: center;
-}
-
-.banner-blaz {
-  position: absolute;
-  top: 10px;
-  left: 40px;
-  font-size: 100px;
-  text-transform: uppercase;
-}
-
-.banner-price {
-  position: absolute;
-  top: 150px;
-  left: 40px;
-  font-size: 30px;
-}
 
 .banner h1 {
   font-size: 50px;
