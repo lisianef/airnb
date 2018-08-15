@@ -1,59 +1,62 @@
-<h1 class="text-center">My bookings</h1>
-<div class="container">
-  <h2>Next rapper at my party !! </h2>
-  <div class="row">
-  <p><% @accepted.each do |accepted| %></p>
-    <div class="col-md-4">
-      <div class="card-booking" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('<%= accepted.rapper.picture %>');">
-        <div class="card-category"><%= accepted.status %></div>
-        <div class="card-description-booking">
-          <h4><%= accepted.rapper.blaz %></h4>
-          <p><%= accepted.total_price %>$</p>
-          <p>From <%= accepted.starting_on %> to <%= accepted.ending_on %></p>
+<div class="booking-index">
+  <div class="container">
+    <h4>Next rapper at my party !! </h4>
+    <div class="row">
+    <p><% @accepted.each do |accepted| %></p>
+      <div class="col-md-4">
+        <div class="card-booking" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('<%= accepted.rapper.picture %>');">
+          <div class="card-category"><%= accepted.status %></div>
+          <div class="card-description-booking">
+            <h4><%= accepted.rapper.blaz %></h4>
+            <p><%= accepted.total_price %>$</p>
+            <p>From <%= accepted.starting_on %> to <%= accepted.ending_on %></p>
+          </div>
+          <a class="card-link" href="#" ></a>
         </div>
-        <a class="card-link" href="#" ></a>
       </div>
+      <% end %>
     </div>
-    <% end %>
+  </div>
+  <br>
+  <br>
+
+  <div class="container">
+    <h4>They'll maybe come to my house !</h4>
+    <div class="row">
+    <p><% @pending.each do |pending| %></p>
+      <div class="col-md-4">
+        <div class="card-booking" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('<%= pending.rapper.picture %>');">
+          <div class="card-category"><%= pending.status %></div>
+          <div class="card-description-booking">
+            <h4><%= pending.rapper.blaz %></h4>
+            <p><%= pending.total_price %>$</p>
+            <p>From <%= pending.starting_on %> to <%= pending.ending_on %></p>
+          </div>
+          <a class="card-link" href="#" ></a>
+        </div>
+      </div>
+      <% end %>
+    </div>
+  </div>
+  <br>
+  <br>
+
+  <div class="container">
+    <h4>My fucking last special guest !</h4>
+    <div class="row">
+    <p><% @past.each do |past| %></p>
+      <div class="col-md-4">
+        <div class="card-booking" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('<%= past.rapper.picture %>');">
+          <div class="card-category"><%= past.status %></div>
+          <div class="card-description-booking">
+            <h4><%= past.rapper.blaz %></h4>
+            <p><%= past.total_price %>$</p>
+            <p>From <%= past.starting_on %> to <%= past.ending_on %></p>
+          </div>
+          <a class="card-link" href="#" ></a>
+        </div>
+      </div>
+      <% end %>
+    </div>
   </div>
 </div>
-
-<div class="container">
-  <h2>They'll maybe come to my house !</h2>
-  <div class="row">
-  <p><% @pending.each do |pending| %></p>
-    <div class="col-md-4">
-      <div class="card-booking" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('<%= pending.rapper.picture %>');">
-        <div class="card-category"><%= pending.status %></div>
-        <div class="card-description-booking">
-          <h4><%= pending.rapper.blaz %></h4>
-          <p><%= pending.total_price %>$</p>
-          <p>From <%= pending.starting_on %> to <%= pending.ending_on %></p>
-        </div>
-        <a class="card-link" href="#" ></a>
-      </div>
-    </div>
-    <% end %>
-  </div>
-</div>
-
-
-<div class="container">
-  <h2>My fucking last special guest !</h2>
-  <div class="row">
-  <p><% @past.each do |past| %></p>
-    <div class="col-md-4">
-      <div class="card-booking" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('<%= past.rapper.picture %>');">
-        <div class="card-category"><%= past.status %></div>
-        <div class="card-description-booking">
-          <h4><%= past.rapper.blaz %></h4>
-          <p><%= past.total_price %>$</p>
-          <p>From <%= past.starting_on %> to <%= past.ending_on %></p>
-        </div>
-        <a class="card-link" href="#" ></a>
-      </div>
-    </div>
-    <% end %>
-  </div>
-</div>
-
