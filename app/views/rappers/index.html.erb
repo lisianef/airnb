@@ -1,13 +1,14 @@
-<h1 class="text-center">Tous nos rappers</h1>
+<h1 class="text-center">All ours rappers</h1>
 
-<div class="main-container">
+<!-- <div class="main-container">
   <%#= form_tag rappers_path, method: :get do %>
     <%#= text_field_tag :query,
       params[:query],
       class: "form-control",
       placeholder: "Find a rapper"
     %>
-  <%# end %>
+  <%# end %> -->
+<div class="main-container">
   <div class="cards-container">
     <div class="row">
       <% @rappers.each do |rapper| %>
@@ -17,19 +18,13 @@
             <%= link_to "", rapper_path(rapper), class: "card-link"  %>
             <div class="card-description"  >
               <h4><%= rapper.blaz %></h4>
-              <p>Style: <%= rapper.style %></p>
-              <p>Tarif: <%= rapper.price_per_day %>$/jour</p>
+              <p><%= rapper.style %></p>
+              <p><%= rapper.price_per_day %>$/day</p>
             </div>
           </div>
         </div>
       <% end %>
     </div>
   </div>
-  <div class="map-container">
-    <div id="map" width=500>
-    </div>
-  </div>
+  <div id="map" data-markers="<%= @markers.to_json %>"></div>
 </div>
-
-
-
