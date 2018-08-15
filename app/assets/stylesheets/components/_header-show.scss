@@ -1,0 +1,40 @@
+.header-show {
+  border: 1px solid #dce0e0;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  font-size: 18px;
+  line-height: 1.42857143;
+}
+
+.header-show-details{
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  padding: 30px;
+      padding-left: 30px;
+  padding-left: 0;
+}
+
+.header-rapper-name {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-b
+}
+
+.header-rapper-name h1 {
+  font-size: 2em;
+  margin: 0.67em 0;
+  margin-top: 0.67em;
+  margin-bottom: 0.67em;
+}
+
+.header-show form {
+  margin: 20px 0;
+  margin-right: 0px;
+  margin-right: 0;
+  background: #F4F4F4;
+  padding: 15px;
+  border-radius: 3px;
+}
