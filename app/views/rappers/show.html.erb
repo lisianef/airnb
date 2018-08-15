@@ -1,15 +1,57 @@
 
 <div class="banner-show" style="background-image: linear-gradient(-225deg, rgba(0,101,168,0.2) 0%, rgba(0,20,40,0.1) 50%), url('<%= cl_image_path @rapper.picture %>')">
-  <div class="banner-blaz"><%= @rapper.blaz %>
+    <div class="banner-blaz"><%= @rapper.blaz %>
+    </div>
+    <div class="banner-price"><%= @rapper.price_per_day %> $
+    </div>
+    <div class="banner-details">
+      <p>Description : <%= @rapper.description %></p>
+      <br>
+      <p>Punchline : <%= @rapper.punchline %></p>
+      <br>
+      <p>Style : <%= @rapper.style %></p>
+      <br>
+      <p>Origin : <%= @rapper.origin %></p>
+    </div>
+</div>
+
+
+
+
+<div class="header-show">
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-12 col-sm-6 col-sm-offset-1">
+        <div class="header-show-details">
+          <div class="header-rapper-name">
+            <h1>Nice <%= @rapper.blaz %> in Nantes </h1>
+            <p class="rating">
+                <i class="fa fa-star" style="color: #ffb400"></i>
+                <i class="fa fa-star" style="color: #ffb400"></i>
+                <i class="fa fa-star" style="color: #ffb400"></i>
+                <i class="fa fa-star" style="color: #ffb400"></i>
+                <i class="fa fa-star" style="color: #ffb400"></i>
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="col-xs-12 col-sm-4">
+        <form action="#" >
+          <h4>Rent <%= @rapper.blaz %></h3>
+          <div class="form-group">
+            <div class="row">
+              <div class="col-xs-6">
+                <input type="text" class="form-control" placeholder="checkin" id="checkin">
+              </div>
+              <div class="col-xs-6">
+                <input type="text" class="form-control" placeholder="checkout">
+              </div>
+            </div>
+          </div>
+          <input type="submit" class="btn btn-danger" value="Book it" style="width: 100%">
+        </form>
+      </div>
+    </div>
   </div>
-  <div class="banner-price"><%= @rapper.price_per_day %> $</div>
-<!--   <a class="btn-treehouse">Rent <%= @rapper.blaz %></a>
-    <p>Description : <%= @rapper.description %></p>
-    <br>
-    <p>Punchline : <%= @rapper.punchline %></p>
-    <br>
-    <p>Style :<%= @rapper.style %></p>
-    <br>
-    <p>Origin : <%= @rapper.origin %></p> -->
 </div>
 
