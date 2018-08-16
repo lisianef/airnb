@@ -1,0 +1,67 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="container">
+  <div class="row">
+    <div class="form-group col-sm-offset-4 col-sm-4">
+      <h1>Add a new rapper</h1>
+    </div>
+  </div>
+  <div class="row">
+    <div class="form-group col-sm-offset-4 col-sm-4">
+      <%= simple_form_for [@rapper], url: agent_rappers_path(@rapper), method: :post do |f| %>
+        <%= f.input :blaz %>
+    </div>
+  </div>
+  <div class="row">
+    <div class="form-group col-sm-offset-4 col-sm-4">
+      <%= f.input :description %>
+    </div>
+  </div>
+  <div class="row">
+    <div class="form-group col-sm-offset-4 col-sm-4">
+      <%= f.input :punchline %>
+    </div>
+  </div>
+  <div class="row">
+    <div class="form-group col-sm-offset-4 col-sm-4">
+      <%= f.input :style %>
+    </div>
+  </div>
+  <div class="row">
+    <div class="form-group col-sm-offset-4 col-sm-4">
+      <%= f.input :origin %>
+    </div>
+  </div>
+  <div class="row">
+    <div class="form-group col-sm-offset-4 col-sm-4">
+      <%= f.input :price_per_day %>
+    </div>
+  </div>
+   <div class="row">
+    <div class="form-group col-sm-offset-4 col-sm-4">
+      <%= f.input :picture %>
+    </div>
+  </div>
+   <div class="row">
+    <div class="form-group col-sm-offset-4 col-sm-4">
+      <%= f.input :picture_cache, as: :hidden %>
+    </div>
+  </div>
+  <div class="row">
+    <div class="form-group col-sm-offset-4 col-sm-4">
+       <%= f.submit "Add a rapper", class: "btn btn-success" %>
+    </div>
+  </div>
+  <% end %>
+</div>

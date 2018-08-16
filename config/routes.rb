@@ -3,14 +3,13 @@ Rails.application.routes.draw do
   root to: 'pages#home'
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
   namespace :agent do
-    resources :rappers, only: [:index, :create]
+    resources :rappers, only: [:index, :new, :create, :destroy]
     resources :bookings, only: [:index] do
       member do
         patch :accept
         patch :refuse
       end
     end
-
     # patch "bookings/:id/accept", to: "bookings#accept"
     # patch "bookings/:id/refuse", to: "bookings#refuse"
   end

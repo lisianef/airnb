@@ -1,6 +1,7 @@
 class BookingsController < ApplicationController
   protect_from_forgery
   before_action :authenticate_user!
+
   def index
     bookings = Booking.all
     @past = []
@@ -19,9 +20,14 @@ class BookingsController < ApplicationController
   end
 
   def create
-    @rapper = Rapper.find(params[:rapper_id])
     @booking = Booking.new(booking_params)
-    @booking.user = current_user
+    @rapper = Rapper.find(params[:rapper_id])
+    @booking.user_id = current_user.id
+    @booking.rapper_id = @rapper.id
+    @booking.status = "pending"
+    @booking.total_price = @rapper.price_per_day * (@booking.ending_on - @booking.starting_on)
+
+
     if @booking.save
       redirect_to rapper_path(@rapper)
     else
