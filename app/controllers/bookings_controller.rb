@@ -1,6 +1,7 @@
 class BookingsController < ApplicationController
   protect_from_forgery
   before_action :authenticate_user!
+
   def index
     bookings = Booking.all
     @past = []
@@ -17,4 +18,5 @@ class BookingsController < ApplicationController
       end
     end
   end
+
 end
