@@ -1,4 +1,6 @@
 class Agent::BookingsController < ApplicationController
+  before_action :set_booking, only: [:accept, :refuse]
+
   def index
     @all_bookings = Booking.all
     @id = current_user.id
@@ -22,5 +24,25 @@ class Agent::BookingsController < ApplicationController
         @accepted << booking
       end
     end
+  end
+
+  def accept
+    @booking.status = "accepted"
+    redirect_to agent_bookings_path
+  end
+
+  def refuse
+    @booking.status = "refused"
+    redirect_to agent_bookings_path
+  end
+
+  private
+
+  def set_booking
+    @booking = Booking.find(params[:id])
+  end
+
+  def booking_params
+    params.require(:booking).permit(:status)
   end
 end
