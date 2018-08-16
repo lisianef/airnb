@@ -17,4 +17,20 @@ class BookingsController < ApplicationController
       end
     end
   end
+
+  def create
+    @booking = Booking.new(booking_params)
+    if @booking.save
+      redirect_to rapper_path(@rapper)
+    else
+      render 'rappers/show'
+    end
+  end
+
+  private
+
+  def booking_params
+    params.require(:booking).permit(:starting_on, :ending_on)
+  end
+
 end

@@ -38,33 +38,13 @@
       <div class="col-xs-12 col-sm-4">
         <div class="form-wrapper" style="width: 400px; margin: 0 auto;">
           <h2>Book <%= @rapper.blaz %></h2>
-
-          <%= simple_form_for :search, method: "get" do |f| %>
-            <%= f.input :starts_at, as: :string, required: false, input_html: {class: "datepicker"} %>
-            <%= f.input :ends_at, as: :string, required: false, input_html: {class: "datepicker"} %>
+          <%= simple_form_for @booking, url: rapper_bookings_path(@rapper) do |f| %>
+            <%= f.input :created_at, as: :string, required: false, input_html: {class: "datepicker"} %>
+            <%= f.input :updated_at, as: :string, required: false, input_html: {class: "datepicker"} %>
             <%= f.button :submit, "Go", class: "btn btn-primary" %>
           <% end %>
         </div>
-
-
-
-
-        <!-- <form action="#" >
-          <h4>Rent <%= @rapper.blaz %></h3>
-          <div class="form-group">
-            <div class="row">
-              <div class="col-xs-6">
-                <input type="text" class="form-control" placeholder="checkin" id="checkin">
-              </div>
-              <div class="col-xs-6">
-                <input type="text" class="form-control" placeholder="checkout">
-              </div>
-            </div>
-          </div>
-          <input type="submit" class="btn btn-danger" value="Book it" style="width: 100%">
-        </form> -->
       </div>
     </div>
   </div>
 </div>
-
