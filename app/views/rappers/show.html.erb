@@ -39,8 +39,8 @@
         <div class="form-wrapper" style="width: 400px; margin: 0 auto;">
           <h2>Book <%= @rapper.blaz %></h2>
           <%= simple_form_for @booking, url: rapper_bookings_path(@rapper) do |f| %>
-            <%= f.input :created_at, as: :string, required: false, input_html: {class: "datepicker"} %>
-            <%= f.input :updated_at, as: :string, required: false, input_html: {class: "datepicker"} %>
+            <%= f.input :starting_on, as: :string, required: false, input_html: {class: "datepicker"} %>
+            <%= f.input :ending_on, as: :string, required: false, input_html: {class: "datepicker"} %>
             <%= f.button :submit, "Go", class: "btn btn-primary" %>
           <% end %>
         </div>
