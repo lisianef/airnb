@@ -8,23 +8,25 @@
       placeholder: "Find a rapper" %>
   <% end %>
 
-<div class="main-container">
-  <div class="cards-container">
-    <div class="row">
-      <% @rappers.each do |rapper| %>
-        <div class="col-xs-12 col-sm-6 col-md-4">
-          <div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)),
-         url('<%= cl_image_path rapper.picture, height: 600, crop: :fill %>')">
-            <%= link_to "", rapper_path(rapper), class: "card-link"  %>
-            <div class="card-description"  >
+<div class="index-container">
+  <div class="main-container">
+    <div class="container">
+      <div class="row">
+      <p><% @rappers.each do |rapper| %></p>
+        <div class="col-md-4">
+          <div class="card-booking" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)),
+          url('<%= cl_image_path rapper.picture %>')">
+            <%= link_to "", rapper_path(rapper), class: "card-link" %>
+            <div class="card-category"><%= rapper.style %></div>
+            <div class="card-description-booking">
               <h4><%= rapper.blaz %></h4>
-              <p><%= rapper.style %></p>
               <p><%= rapper.price_per_day %>$/day</p>
             </div>
           </div>
         </div>
-      <% end %>
+        <% end %>
+      </div>
     </div>
+    <div id="map" data-markers="<%= @markers.to_json %>"></div>
   </div>
-  <div id="map" data-markers="<%= @markers.to_json %>"></div>
 </div>
