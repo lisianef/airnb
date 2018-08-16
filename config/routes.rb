@@ -10,7 +10,6 @@ Rails.application.routes.draw do
         patch :refuse
       end
     end
-
     # patch "bookings/:id/accept", to: "bookings#accept"
     # patch "bookings/:id/refuse", to: "bookings#refuse"
   end
