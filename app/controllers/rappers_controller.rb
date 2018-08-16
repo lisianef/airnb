@@ -1,19 +1,11 @@
 class RappersController < ApplicationController
   def index
-    # @rappers = Rapper.where.not(latitude: nil, longitude: nil)
-    # @markers = @rappers.map do |rapper|
-    #   {
-    #     lat: rapper.latitude,
-    #     lng: rapper.longitude,
-    #     infoWindow: { content: render_to_string(partial: "/rappers/map_box", locals: { rapper: rapper }) }
-    #   }
-    # end
     if params[:query].present?
       @rappers = Rapper.where("blaz ILIKE ?", "%#{params[:query]}%").where.not(latitude: nil, longitude: nil)
-      @markers = marquer(@rappers)
+      @markers = marker(@rappers)
     else
       @rappers = Rapper.all.where.not(latitude: nil, longitude: nil)
-      @markers = marquer(@rappers)
+      @markers = marker(@rappers)
     end
   end
 
@@ -24,7 +16,7 @@ class RappersController < ApplicationController
 
   private
 
-  def marquer(rappers)
+  def marker(rappers)
     rappers.map do |rapper|
       {
         lat: rapper.latitude,
@@ -32,6 +24,5 @@ class RappersController < ApplicationController
         infoWindow: { content: render_to_string(partial: "/rappers/map_box", locals: { rapper: rapper }) }
       }
     end
-    # @rappers = Rapper.where.not(latitude: nil, longitude: nil)
   end
 end

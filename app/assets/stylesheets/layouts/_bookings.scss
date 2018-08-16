@@ -1,4 +1,11 @@
+.main-container {
+  display: flex;
+}
 
+.container{
+  flex: 0 0 67%;
+  padding: 0 20px;
+}
 
 .index-container {
   background-color: #232E3F;
