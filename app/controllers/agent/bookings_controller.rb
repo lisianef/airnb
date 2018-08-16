@@ -28,11 +28,13 @@ class Agent::BookingsController < ApplicationController
 
   def accept
     @booking.status = "accepted"
+    @booking.save
     redirect_to agent_bookings_path
   end
 
   def refuse
     @booking.status = "refused"
+    @booking.save
     redirect_to agent_bookings_path
   end
 
