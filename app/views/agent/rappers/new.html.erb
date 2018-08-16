@@ -1,0 +1,13 @@
+<h1>Add a new rapper</h1>
+
+<%= simple_form_for [@rapper], url: agent_rappers_path(@rapper), method: :post do |f| %>
+  <%= f.input :blaz %>
+  <%= f.input :description %>
+  <%= f.input :punchline %>
+  <%= f.input :style %>
+  <%= f.input :origin %>
+  <%= f.input :price_per_day %>
+  <%= f.input :picture %>
+  <%= f.input :picture_cache, as: :hidden %>
+  <%= f.submit "Add a rapper", class: "btn btn-success" %>
+<% end %>
