@@ -1,9 +1,12 @@
 .header-show {
-  border: 1px solid #dce0e0;
+  border : 1px blue;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
   font-size: 18px;
   line-height: 1.42857143;
+  padding: 60px;
+  display: flex;
+  padding-bottom: 100px;
 }
 
 .header-show-details{
@@ -14,13 +17,13 @@
   -ms-flex-align: center;
   align-items: center;
   padding: 30px;
-      padding-left: 30px;
+  padding-left: 30px;
   padding-left: 0;
 }
 
 .header-rapper-name {
   -webkit-box-sizing: border-box;
-  box-sizing: border-b
+  box-sizing: border-b;
 }
 
 .header-rapper-name h1 {
@@ -31,10 +34,17 @@
 }
 
 .header-show form {
-  margin: 20px 0;
+  color: #232E3F;
+  margin: 35px 0;
+  margin-bottom: 10px;
   margin-right: 0px;
   margin-right: 0;
   background: #F4F4F4;
-  padding: 15px;
+  padding: 30px;
   border-radius: 3px;
+}
+
+.header-show form .btn {
+  width: 100%;
+  line-height: 35px;
 }
