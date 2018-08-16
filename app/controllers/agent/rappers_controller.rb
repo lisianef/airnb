@@ -6,6 +6,6 @@ class Agent::RappersController < ApplicationController
   def destroy
     @rapper = Rapper.find(params[:id])
     @rapper.destroy
-    redirect_to agent_rappers_path
+    redirect_to agent_rappers_path, :notice => "Your rapper has been deleted"
   end
 end
