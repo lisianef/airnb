@@ -19,6 +19,7 @@ class RappersController < ApplicationController
 
   def show
     @rapper = Rapper.find(params[:id])
+    @booking = Booking.new
   end
 
   private
