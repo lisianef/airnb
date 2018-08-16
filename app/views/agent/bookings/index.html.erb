@@ -1,0 +1,77 @@
+<h2 class='text-center'> All your shows </h2>
+<div class="booking-index">
+  <div class="container">
+    <%  if @pending[0].nil? %>
+    <h4>No new bookings yet (don't worry it will come)</h4>
+    <% else %>
+      <h4>You have new bookings ! </h4>
+      <div class="row">
+      <p><% @pending.each do |pending| %></p>
+        <div class="col-md-4">
+          <div class="card-booking" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)),
+          url('<%= pending.rapper.picture %>');">
+            <div class="card-category"><%= pending.status %></div>
+            <div class="card-description-booking">
+              <h4><%= pending.rapper.blaz %></h4>
+              <p><%= pending.total_price %>$</p>
+              <p>From <%= pending.starting_on %> to <%= pending.ending_on %></p>
+            </div>
+          </div>
+          <%= link_to accept_agent_booking_path(pending.id), method: :patch do %>
+             <i class="btn btn-primary"> Accept </i>
+          <% end %>
+          <%= link_to refuse_agent_booking_path(pending.id), method: :patch do %>
+            <i class="btn btn-danger"> Refuse </i>
+          <% end %>
+        </div>
+        <% end %>
+      </div>
+    <% end %>
+  </div>
+  <br>
+  <br>
+
+  <div class="container">
+    <% if @accepted[0] != nil  %>
+      <h4>Next perfomances </h4>
+      <div class="row">
+      <p><% @accepted.each do |accepted| %></p>
+        <div class="col-md-4">
+          <div class="card-booking" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('<%= accepted.rapper.picture %>');">
+            <div class="card-category"><%= accepted.status %></div>
+            <div class="card-description-booking">
+              <h4><%= accepted.rapper.blaz %></h4>
+              <p><%= accepted.total_price %>$</p>
+              <p>From <%= accepted.starting_on %> to <%= accepted.ending_on %></p>
+            </div>
+            <a class="card-link" href="#" ></a>
+          </div>
+        </div>
+        <% end %>
+      </div>
+    <% end %>
+  </div>
+  <br>
+  <br>
+
+  <div class="container">
+    <% if @past != nil  %>
+      <h4>Past shows of your rappers</h4>
+      <div class="row">
+      <p><% @past.each do |past| %></p>
+        <div class="col-md-4">
+          <div class="card-booking" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('<%= past.rapper.picture %>');">
+            <div class="card-category"><%= past.status %></div>
+            <div class="card-description-booking">
+              <h4><%= past.rapper.blaz %></h4>
+              <p><%= past.total_price %>$</p>
+              <p>From <%= past.starting_on %> to <%= past.ending_on %></p>
+            </div>
+            <a class="card-link" href="#" ></a>
+          </div>
+        </div>
+        <% end %>
+      </div>
+    <% end %>
+  </div>
+</div>
