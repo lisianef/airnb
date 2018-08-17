@@ -44,7 +44,8 @@ booba = Rapper.create!({
   address: "25 boulevard de Stalingrad, 44000 Nantes, France",
   price_per_day: 5000,
   picture: File.open(Rails.root.join("db/fixtures/rappers/booba.jpg")),
-  background_picture: File.open(Rails.root.join("db/fixtures/rappers/booba.jpg"))
+  background_picture: File.open(Rails.root.join("db/fixtures/rappers/booba.jpg")),
+  video: "oBbHo8b4FDc"
 })
 
 vybz = Rapper.create!({
@@ -57,7 +58,8 @@ vybz = Rapper.create!({
   address: "52 rue Gambetta 44000, France",
   price_per_day: 3000,
   picture: File.open(Rails.root.join("db/fixtures/rappers/vybz.jpg")),
-  background_picture: File.open(Rails.root.join("db/fixtures/rappers/vybz.jpg"))
+  background_picture: File.open(Rails.root.join("db/fixtures/rappers/vybz.jpg")),
+  video: "CITU4KH93aU"
 })
 
 drake = Rapper.create!({
@@ -70,7 +72,8 @@ drake = Rapper.create!({
   address: "2 Rue meuris, 44100 Nantes, France",
   price_per_day: 10000,
   picture: File.open(Rails.root.join("db/fixtures/rappers/drake.jpg")),
-  background_picture: File.open(Rails.root.join("db/fixtures/rappers/drake.jpg"))
+  background_picture: File.open(Rails.root.join("db/fixtures/rappers/drake.jpg")),
+  video: "DRS_PpOrUZ4"
 })
 
 tupac = Rapper.create!({
@@ -83,7 +86,8 @@ tupac = Rapper.create!({
   address: "8, allée de la maison rouge 44000 Nantes, France",
   price_per_day: 20000,
   picture: File.open(Rails.root.join("db/fixtures/rappers/2pac.jpg")),
-  background_picture: File.open(Rails.root.join("db/fixtures/rappers/2pac.jpg"))
+  background_picture: File.open(Rails.root.join("db/fixtures/rappers/2pac.jpg")),
+  video: "41qC3w3UUkU"
 })
 
 teki = Rapper.create!({
@@ -96,7 +100,8 @@ teki = Rapper.create!({
   address: "24 rue kervegan 44000 Nantes, France",
   price_per_day: 1000,
   picture: File.open(Rails.root.join("db/fixtures/rappers/teki.jpg")),
-  background_picture: File.open(Rails.root.join("db/fixtures/rappers/teki.jpg"))
+  background_picture: File.open(Rails.root.join("db/fixtures/rappers/teki.jpg")),
+  video: "Of4MmYVOeLY"
 })
 
 mc_circulaire = Rapper.create!({
@@ -109,7 +114,8 @@ mc_circulaire = Rapper.create!({
   address: "5 boulevard de Vendée 44200 Nantes, France",
   price_per_day: 100,
   picture: File.open(Rails.root.join("db/fixtures/rappers/mc-circulaire.jpg")),
-  background_picture: File.open(Rails.root.join("db/fixtures/rappers/mc-circulaire.jpg"))
+  background_picture: File.open(Rails.root.join("db/fixtures/rappers/mc-circulaire.jpg")),
+  video: "yjymIX9cpJc"
 })
 
 jul = Rapper.create!({
@@ -122,7 +128,8 @@ jul = Rapper.create!({
   address: "12 avenue des cigales, 44200 Nantes, France",
   price_per_day: 10,
   picture: File.open(Rails.root.join("db/fixtures/rappers/jul.jpg")),
-  background_picture: File.open(Rails.root.join("db/fixtures/rappers/jul.jpg"))
+  background_picture: File.open(Rails.root.join("db/fixtures/rappers/jul.jpg")),
+  video: "QJ26a26F25I"
 })
 
 hamza = Rapper.create!({
@@ -135,7 +142,8 @@ hamza = Rapper.create!({
   address: "94, rue des hauts pavés 44000 Nantes, France",
   price_per_day: 1500,
   picture: File.open(Rails.root.join("db/fixtures/rappers/hamza.jpg")),
-  background_picture: File.open(Rails.root.join("db/fixtures/rappers/hamza.jpg"))
+  background_picture: File.open(Rails.root.join("db/fixtures/rappers/hamza.jpg")),
+  video: "mdcBqqWj3kY"
 })
 
 pnl = Rapper.create!({
@@ -148,7 +156,8 @@ pnl = Rapper.create!({
   address: "56 rue de Strasbourg 44000 Nantes, France",
   price_per_day: 10000,
   picture: File.open(Rails.root.join("db/fixtures/rappers/pnl.jpg")),
-  background_picture: File.open(Rails.root.join("db/fixtures/rappers/pnl.jpg"))
+  background_picture: File.open(Rails.root.join("db/fixtures/rappers/pnl.jpg")),
+  video: "IOwom_Gp__Q"
 })
 
 sch = Rapper.create!({
@@ -161,7 +170,8 @@ sch = Rapper.create!({
   address: "30 boulevard de la prairie au Duc 44200 Nantes, France",
   price_per_day: 4000,
   picture: File.open(Rails.root.join("db/fixtures/rappers/sch.jpg")),
-  background_picture: File.open(Rails.root.join("db/fixtures/rappers/sch.jpg"))
+  background_picture: File.open(Rails.root.join("db/fixtures/rappers/sch.jpg")),
+  video: "httfJoffl9E"
 })
 
 ichon = Rapper.create!({
@@ -174,7 +184,8 @@ ichon = Rapper.create!({
   address: "3 rue des carmes 44000 Nantes, France",
   price_per_day: 1000,
   picture: File.open(Rails.root.join("db/fixtures/rappers/ichon.jpg")),
-  background_picture: File.open(Rails.root.join("db/fixtures/rappers/ichon.jpg"))
+  background_picture: File.open(Rails.root.join("db/fixtures/rappers/ichon.jpg")),
+  video: "D7De-2hxIk0"
 })
 
 liza = Rapper.create!({
@@ -187,7 +198,8 @@ liza = Rapper.create!({
   address: "2 boulevard Jean Monnet 44000 Nantes, France",
   price_per_day: 900,
   picture: File.open(Rails.root.join("db/fixtures/rappers/liza-monnet.jpg")),
-  background_picture: File.open(Rails.root.join("db/fixtures/rappers/liza-monnet.jpg"))
+  background_picture: File.open(Rails.root.join("db/fixtures/rappers/liza-monnet.jpg")),
+  video: "bXH7b6gIf0g"
 })
 
 amandine = Rapper.create!({
@@ -200,7 +212,8 @@ amandine = Rapper.create!({
   address: "20, rue Pitre Chevalier 44000 Nantes, France",
   price_per_day: 200,
   picture: File.open(Rails.root.join("db/fixtures/rappers/amandine.jpg")),
-  background_picture: File.open(Rails.root.join("db/fixtures/rappers/amandine.jpg"))
+  background_picture: File.open(Rails.root.join("db/fixtures/rappers/amandine.jpg")),
+  video: "u5IWEUv5ojE"
 })
 
 notorious = Rapper.create!({
@@ -213,7 +226,8 @@ notorious = Rapper.create!({
   address: "8 allée d'Orléan 44000 Nantes, France",
   price_per_day: 3000,
   picture: File.open(Rails.root.join("db/fixtures/rappers/notorious.jpg")),
-  background_picture: File.open(Rails.root.join("db/fixtures/rappers/notorious.jpg"))
+  background_picture: File.open(Rails.root.join("db/fixtures/rappers/notorious.jpg")),
+  video: "_JZom_gVfuw"
 })
 
 craig  = Rapper.create!({
@@ -226,7 +240,8 @@ craig  = Rapper.create!({
   address: "40 rue des hauts pavés 44000 Nantes, France",
   price_per_day: 800,
   picture: File.open(Rails.root.join("db/fixtures/rappers/craig.jpg")),
-  background_picture: File.open(Rails.root.join("db/fixtures/rappers/craig.jpg"))
+  background_picture: File.open(Rails.root.join("db/fixtures/rappers/craig.jpg")),
+  video: "Dbb7xeZGR-U"
 })
 
 
