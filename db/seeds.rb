@@ -170,7 +170,7 @@ sch = Rapper.create!({
   address: "30 boulevard de la prairie au Duc 44200 Nantes, France",
   price_per_day: 4000,
   picture: File.open(Rails.root.join("db/fixtures/rappers/sch.jpg")),
-  background_picture: File.open(Rails.root.join("db/fixtures/rappers/sch.jpg")),
+  background_picture: File.open(Rails.root.join("db/fixtures/rappers/sch-bg.jpg")),
   video: "httfJoffl9E"
 })
 
