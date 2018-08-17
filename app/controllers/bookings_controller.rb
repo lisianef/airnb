@@ -29,7 +29,7 @@ class BookingsController < ApplicationController
 
 
     if @booking.save
-      redirect_to rapper_path(@rapper)
+      redirect_to bookings_path
     else
       render 'rappers/show'
     end
