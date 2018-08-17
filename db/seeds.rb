@@ -37,7 +37,7 @@ puts "Creating rappers..."
 booba = Rapper.create!({
   agent: lisiane,
   blaz: "Booba",
-  description: "Pretty black",
+  description: "Duc de Bologne",
   punchline: "Que des n°10 dans ma team",
   style: "Hardcore",
   origin: "93",
@@ -65,7 +65,7 @@ vybz = Rapper.create!({
 drake = Rapper.create!({
   agent: lisiane,
   blaz: "Drake",
-  description: "Good danceur",
+  description: "Champagne papi",
   punchline: "Call me on my cellphone",
   style: "Canadian",
   origin: "Vancouver",
@@ -233,7 +233,7 @@ notorious = Rapper.create!({
 craig  = Rapper.create!({
   agent: marine,
   blaz: "Craig David",
-  description: "Best sound 2000",
+  description: "Best tracks of the 2000s",
   punchline: "7 days",
   style: "UK garage",
   origin: "Londres",
@@ -243,6 +243,46 @@ craig  = Rapper.create!({
   background_picture: File.open(Rails.root.join("db/fixtures/rappers/craig.jpg")),
   video: "Dbb7xeZGR-U"
 })
+
+# missy = Rapper.create!({
+#   agent: enzo,
+#   blaz: "Missy Elliot",
+#   description: "Misdemeanor ",
+#   punchline: "Work-it",
+#   style: "Hip-hop",
+#   origin: "Virginia",
+#   address: "",
+#   price_per_day: ,
+#   picture: File.open(Rails.root.join("db/fixtures/rappers/.jpg")),
+#   background_picture: File.open(Rails.root.join("db/fixtures/rappers/.jpg"))
+# })
+
+#   = Rapper.create!({
+#   agent: ,
+#   blaz: "",
+#   description: "",
+#   punchline: "",
+#   style: "",
+#   origin: "",
+#   address: "",
+#   price_per_day: ,
+#   picture: File.open(Rails.root.join("db/fixtures/rappers/.jpg")),
+#   background_picture: File.open(Rails.root.join("db/fixtures/rappers/.jpg"))
+# })
+
+
+#   = Rapper.create!({
+#   agent: ,
+#   blaz: "",
+#   description: "",
+#   punchline: "",
+#   style: "",
+#   origin: "",
+#   address: "",
+#   price_per_day: ,
+#   picture: File.open(Rails.root.join("db/fixtures/rappers/.jpg")),
+#   background_picture: File.open(Rails.root.join("db/fixtures/rappers/.jpg"))
+# })
 
 
 puts "Creating bookings..."
