@@ -1,10 +1,9 @@
 <div class="form-container">
 <h2 class='text-center'> All your rappers </h2>
 <div class="index-container">
-  <div class="main-container">
-    <div class="container">
+    <div class="rappers-container">
       <div class="row">
-      <p><% @rappers.each do |rapper| %></p>
+      <% @rappers.each do |rapper| %>
         <div class="col-md-4">
           <div class="card-booking" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)),
           url('<%= cl_image_path rapper.picture %>')">
@@ -19,8 +18,8 @@
               <p><%= rapper.price_per_day %>$/day</p>
             </div>
           </div>
-          <% end %>
         </div>
+      <% end %>
       </div>
     </div>
     <div class="container">
@@ -30,5 +29,4 @@
         </div>
       </div>
     </div>
-  </div>
 </div>
