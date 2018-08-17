@@ -27,7 +27,8 @@ class RappersController < ApplicationController
         lat: rapper.latitude,
         lng: rapper.longitude,
         infoWindow: { content: render_to_string(partial: "/rappers/map_box", locals: { rapper: rapper }) },
-        icon: icon
+        icon: "http://res.cloudinary.com/djntzkorq/image/upload/v1534516977/dollar-sign-solid.png",
+        title: rapper.blaz
       }
     end
   end
