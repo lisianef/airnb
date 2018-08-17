@@ -17,11 +17,17 @@ class RappersController < ApplicationController
   private
 
   def marker(rappers)
-    rappers.map do |rapper|
+
+    icon = {
+      url: "http://www.myiconfinder.com/uploads/iconsets/256-256-87d8abae0d940c0a7145c55cf1c2e3dd-dollar.png"
+    }
+
+    @markers = rappers.map do |rapper|
       {
         lat: rapper.latitude,
         lng: rapper.longitude,
-        infoWindow: { content: render_to_string(partial: "/rappers/map_box", locals: { rapper: rapper }) }
+        infoWindow: { content: render_to_string(partial: "/rappers/map_box", locals: { rapper: rapper }) },
+        icon: icon
       }
     end
   end

@@ -1,3 +1,4 @@
+<div class="form-container">
 <h2 class='text-center'> All your rappers </h2>
 <div class="index-container">
   <div class="main-container">
@@ -7,7 +8,10 @@
         <div class="col-md-4">
           <div class="card-booking" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)),
           url('<%= cl_image_path rapper.picture %>')">
-            <%= link_to "+", agent_rapper_path(rapper), method: :delete, data: { confirm: "Are you sure?" }, class: "card-remove-link" %>
+            <div class="btn-update-delete">
+              <div><%= link_to "+", agent_rapper_path(rapper), method: :delete, data: { confirm: "Are you sure?" }, class: "card-remove-link" %></div>
+              <div><%= link_to "!", edit_agent_rapper_path(rapper), class: "card-remove-link"  %></div>
+            </div>
             <%= link_to "", rapper_path(rapper), class: "card-link" %>
             <div class="card-category"><%= rapper.style %></div>
             <div class="card-description-booking">
@@ -15,8 +19,15 @@
               <p><%= rapper.price_per_day %>$/day</p>
             </div>
           </div>
+          <% end %>
         </div>
-        <% end %>
+      </div>
+    </div>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-offset-5 col-md-4">
+          <%= link_to "Add a rapper", new_agent_rapper_path, class: "btn btn-primary text-center" %>
+        </div>
       </div>
     </div>
   </div>
