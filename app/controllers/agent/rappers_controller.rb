@@ -2,7 +2,7 @@ class Agent::RappersController < ApplicationController
   def index
     @rappers = current_user.rappers
   end
-
+  
   def new
     @rapper = Rapper.new
   end
@@ -17,6 +17,12 @@ class Agent::RappersController < ApplicationController
     end
   end
 
+  def destroy
+    @rapper = Rapper.find(params[:id])
+    @rapper.destroy
+    redirect_to agent_rappers_path, :notice => "Your rapper has been deleted"
+  end
+  
   private
 
   def rapper_params
