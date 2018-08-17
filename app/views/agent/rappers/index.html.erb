@@ -1,3 +1,4 @@
+<div class="form-container">
 <h2 class='text-center'> All your rappers </h2>
 <div class="index-container">
   <div class="main-container">
@@ -18,8 +19,15 @@
               <p><%= rapper.price_per_day %>$/day</p>
             </div>
           </div>
+          <% end %>
         </div>
-        <% end %>
+      </div>
+    </div>
+  </div>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-offset-5 col-md-4">
+        <%= link_to "Add a rapper", new_agent_rapper_path, class: "btn btn-primary text-center" %>
       </div>
     </div>
   </div>
